@@ -9357,6 +9357,12 @@ public final class Settings {
         public static final String USE_SLIM_RECENTS = "use_slim_recents";
 
         /**
+         * Control whether the process CPU info meter should be shown
+         * @hide
+         */
+        public static final String SHOW_CPU = "show_cpu";
+
+        /**
          * Whether to only show actually running tasks
          * @hide
          */
