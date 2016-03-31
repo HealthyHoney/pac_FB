@@ -127,17 +127,17 @@ public class CPUInfoService extends Service {
             mOnlinePaint = new Paint();
             mOnlinePaint.setAntiAlias(true);
             mOnlinePaint.setTextSize(textSize);
-            mOnlinePaint.setARGB(255, 255, 255, 255);
+            mOnlinePaint.setARGB(255, 0, 235, 0);
 
             mOfflinePaint = new Paint();
             mOfflinePaint.setAntiAlias(true);
             mOfflinePaint.setTextSize(textSize);
-            mOfflinePaint.setARGB(255, 255, 0, 0);
+            mOfflinePaint.setARGB(0, 0, 0, 0);
 
             mLpPaint = new Paint();
             mLpPaint.setAntiAlias(true);
             mLpPaint.setTextSize(textSize);
-            mLpPaint.setARGB(255, 0, 255, 0);
+            mLpPaint.setARGB(0, 0, 0, 0);
 
             mAscent = mOnlinePaint.ascent();
             float descent = mOnlinePaint.descent();
@@ -263,7 +263,7 @@ public class CPUInfoService extends Service {
                     StringBuffer sb=new StringBuffer();
                     String cpuTemp = CPUInfoService.readOneLine(CPU_TEMP_HTC);
                     if (cpuTemp == null){
-                        cpuTemp = CPUInfoService.readOneLine(CPU_TEMP_LGE);
+                        cpuTemp = String.valueOf(Integer.parseInt(CPUInfoService.readOneLine(CPU_TEMP_LGE))/1000);
                     }
                     sb.append(cpuTemp == null?"0":cpuTemp);
                     sb.append(";");
