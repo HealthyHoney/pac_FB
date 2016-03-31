@@ -2241,6 +2241,14 @@ public final class Settings {
         public static final String SHOW_PROCESSES = Global.SHOW_PROCESSES;
 
         /**
+         * Control whether the process CPU info meter should be shown.
+         *
+         * @deprecated Use {@link Global#SHOW_CPU} instead
+         */
+        @Deprecated
+        public static final String SHOW_CPU = Global.SHOW_CPU;
+
+        /**
          * If 1, the activity manager will aggressively finish activities and
          * processes as soon as they are no longer needed.  If 0, the normal
          * extended lifetime is used.
@@ -7887,6 +7895,12 @@ public final class Settings {
         public static final String SHOW_PROCESSES = "show_processes";
 
         /**
+         * Control whether the process CPU info meter should be shown.
+         * @hide
+         */
+        public static final String SHOW_CPU = "show_cpu";
+
+        /**
          * If 1 low power mode is enabled.
          * @hide
          */
@@ -9365,12 +9379,6 @@ public final class Settings {
          * @hide
          */
         public static final String USE_SLIM_RECENTS = "use_slim_recents";
-
-        /**
-         * Control whether the process CPU info meter should be shown
-         * @hide
-         */
-        public static final String SHOW_CPU = "show_cpu";
 
         /**
          * Whether to only show actually running tasks
